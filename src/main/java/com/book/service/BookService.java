@@ -8,6 +8,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import static org.springframework.util.StringUtils.hasText;
 
@@ -20,6 +21,7 @@ public class BookService {
         this.repo = repo;
     }
 
+    @Transactional
     public PageBookDto getAllBooks(final int pageNumber, final int pageSize, final String sortBy) {
         int page = pageNumber < 1 ? 0 : pageNumber - 1;
         int size = pageSize < 1 ? 5 : pageSize;
@@ -31,6 +33,7 @@ public class BookService {
         return PageBookDto.from(pageBooks);
     }
 
+    @Transactional
     public BookView getBookById(final Long id) {
         return repo.findBookById(id);
     }
