@@ -1,4 +1,4 @@
-# books-api
+# books-read-api
 Rest service for reading books domain with pagination from MySql database
 
 ## Getting the code on your computer
