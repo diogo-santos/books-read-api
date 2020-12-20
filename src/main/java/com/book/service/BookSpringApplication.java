@@ -32,7 +32,7 @@ public class BookSpringApplication {
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
 						.allowedOrigins("*")
-						.allowedMethods("*");
+						.allowedMethods("GET");
 			}
 			@Override
 			public void addViewControllers(ViewControllerRegistry registry) {
