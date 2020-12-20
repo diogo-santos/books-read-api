@@ -10,8 +10,8 @@ Rest service for reading books domain with pagination from MySql database
 Set MySql database properties - application.properties
 ```
 spring.datasource.url=jdbc:mysql://localhost:3306/books
-spring.datasource.username=root
-spring.datasource.password=mysqlpasswd
+spring.datasource.username=mysql username
+spring.datasource.password=mysql password
 ```
 
 Run the app
